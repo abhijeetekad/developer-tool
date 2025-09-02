@@ -1,13 +1,14 @@
 import { Sidebar } from './Sidebar'
+import { Navbar } from './Navbar'
 
 export function Layout({ children }) {
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       <div className="flex">
         {/* Desktop Sidebar */}
-        <aside className="w-72 border-r min-h-screen p-6 hidden lg:block">
+        <aside className="w-72 border-r min-h-[calc(100vh-3.5rem)] p-6 hidden lg:block">
           <div className="sticky top-6">
-            <h1 className="text-2xl font-bold mb-6">Developer Toolbox</h1>
             <Sidebar className="hidden lg:block" />
           </div>
         </aside>
